@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React3-Api/search/build/static/css/main.cda62dd1.chunk.css",
+    "main.js": "/React3-Api/search/build/static/js/main.0afe83b2.chunk.js",
+    "main.js.map": "/React3-Api/search/build/static/js/main.0afe83b2.chunk.js.map",
+    "runtime~main.js": "/React3-Api/search/build/static/js/runtime~main.72bc5529.js",
+    "runtime~main.js.map": "/React3-Api/search/build/static/js/runtime~main.72bc5529.js.map",
+    "static/js/2.56059f80.chunk.js": "/React3-Api/search/build/static/js/2.56059f80.chunk.js",
+    "static/js/2.56059f80.chunk.js.map": "/React3-Api/search/build/static/js/2.56059f80.chunk.js.map",
+    "index.html": "/React3-Api/search/build/index.html",
+    "precache-manifest.4a876e6d830d8900bd4a869e8299086e.js": "/React3-Api/search/build/precache-manifest.4a876e6d830d8900bd4a869e8299086e.js",
+    "service-worker.js": "/React3-Api/search/build/service-worker.js",
+    "static/css/main.cda62dd1.chunk.css.map": "/React3-Api/search/build/static/css/main.cda62dd1.chunk.css.map"
+  }
+}
