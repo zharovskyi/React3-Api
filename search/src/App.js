@@ -70,6 +70,7 @@ export default class App extends Component {
     })
   }
 
+
   render() {
     const { query, images, isLoading, isOpen, largeImageUrl } = this.state;
     return (
