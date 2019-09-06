@@ -1,5 +1,6 @@
 import React from 'react';
-import style from './SearchForm.module.css'
+import style from './SearchForm.module.css';
+import PropTypes from 'prop-types';
 
 const SearchForm = ({ onSubmit, value, onChange }) => (
     <form className={style.searchForm} onSubmit={onSubmit}>
@@ -8,3 +9,8 @@ const SearchForm = ({ onSubmit, value, onChange }) => (
 );
 
 export default SearchForm;
+SearchForm.propTypes = {
+    value: PropTypes.string.isRequired,
+    onSubmit: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired
+}

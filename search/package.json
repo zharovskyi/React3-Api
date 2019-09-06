@@ -40,5 +40,6 @@
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2"
-  }
+  },
+  "homepage": "https://zharovskyi.github.io/React3-Api/search/build"
 }
