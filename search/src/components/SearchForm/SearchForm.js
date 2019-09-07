@@ -1,6 +1,7 @@
 import React from 'react';
-import style from './SearchForm.module.css';
 import PropTypes from 'prop-types';
+import style from './SearchForm.module.css';
+
 
 const SearchForm = ({ onSubmit, value, onChange }) => (
     <form className={style.searchForm} onSubmit={onSubmit}>

@@ -7,7 +7,9 @@ import axios from 'axios';
 import Modal from './components/Modal/Modal';
 import Loader from './components/Loader/Loader';
 
-
+const StartURL = "https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=dog";
+const StartPAGE = "&page=1";
+const KEY = "&per_page=12&key=13241537-06d8871706b8937518ecf25ca";
 export default class App extends Component {
   state = {
     query: '',
@@ -20,9 +22,9 @@ export default class App extends Component {
 
   componentDidMount() {
     axios
-      .get('https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=cat&page=1&per_page=4&key=13241537-06d8871706b8937518ecf25ca')
-      .then(response =>
-        this.setState({ images: response.data.hits }),
+      .get(StartURL + StartPAGE + KEY)
+      .then(responce =>
+        this.setState({ images: responce.data.hits }),
     );
   }
 
@@ -53,8 +55,9 @@ export default class App extends Component {
     this.setState(prevState => ({
       images: [...prevState.images, ...responce.data.hits],
       isLoading: false,
+      page: page + 1,
     }))
-
+    window.scrollBy(0, window.innerHeight);
   }
   // open modal
   handleOpenModal = largeImageUrl => {
@@ -70,7 +73,6 @@ export default class App extends Component {
     })
   }
 
-
   render() {
     const { query, images, isLoading, isOpen, largeImageUrl } = this.state;
     return (
@@ -85,6 +87,7 @@ export default class App extends Component {
             images={images}
             openModal={this.handleOpenModal}
             onClick={this.handleClickLoadMore} />}
+
           {isOpen && <Modal
             largeImageUrl={largeImageUrl}
             handleCloseModal={this.handleCloseModal} />}

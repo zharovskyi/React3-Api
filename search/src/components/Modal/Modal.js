@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import style from './Modal.module.css';
 
-
-
-
-
 class Modal extends Component {
 
     componentDidMount() {
@@ -18,11 +14,10 @@ class Modal extends Component {
     onCloseModal = (e) => {
         if (e.which === 27) {
             this.props.handleCloseModal();
-            console.log('It\'s working')
         }
     }
-    stopPropagation = (e) => {
 
+    stopPropagation = (e) => {
         e.stopPropagation();
     }
 
